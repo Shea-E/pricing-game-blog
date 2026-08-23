@@ -500,11 +500,11 @@
             <div class="blog-section">
                 <h2>Latest Posts</h2>
                 
-                <div class="blog-post-card" onclick="showPage('post-intro')">
-                    <div class="date">11 August 2026</div>
-                    <h3>Why The Pricing Game? An Introduction</h3>
-                    <p>Welcome to The Pricing Game. This post explores why I started this blog and what draws me to the intersection of game theory, algorithms, and markets.</p>
-                    <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-intro');">Read More →</a>
+               <div class="blog-post-card" onclick="showPage('post-realpage')">
+                    <div class="date">22 August 2026</div>
+                    <h3>The Invisible Hand(Shake): The Algorithm that Fixed US Rents</h3>
+                    <p>Millions of US renters have faced suspiciously similar price hikes across competing buildings. Behind it lies one of the clearest cases of algorithmic collusion the courts have ever seen.</p>
+                    <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-realpage');">Read More →</a>
                 </div>
             </div>
 
@@ -1228,12 +1228,20 @@
         <div id="blog-page" class="page">
             <h1 style="font-size: 40px; font-weight: 700; margin-bottom: 48px; color: #1f2937; font-family: Georgia, serif;">Blog Posts</h1>
             
+                        <div class="blog-list-item" onclick="showPage('post-realpage')">
+                <div class="date">22 August 2026</div>
+                <h2>The Invisible Hand(Shake): The Algorithm that Fixed US Rents</h2>
+                <p>Millions of US renters have faced suspiciously similar price hikes across competing buildings. Behind it lies one of the clearest cases of algorithmic collusion the courts have ever seen.</p>
+                <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-realpage');">Read More →</a>
+            </div>
+
             <div class="blog-list-item" onclick="showPage('post-intro')">
                 <div class="date">11 August 2026</div>
                 <h2>Why The Pricing Game? An Introduction</h2>
                 <p>Welcome to The Pricing Game. This post explores why I started this blog and what draws me to the intersection of game theory, algorithms, and markets.</p>
                 <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-intro');">Read More →</a>
             </div>
+
         </div>
 
         <!-- About Page -->
@@ -1243,6 +1251,47 @@
             <p>My research spans airline economics, dynamic pricing, algorithmic collusion, and competition policy. I've worked in wealth management and asset management, which shaped how I think about incentives and strategic behaviour.</p>
             <p>These posts are my thinking in progress. Some are deep dives into theory. Others are responses to current events. All of them aim to be rigorous but accessible—I'm still learning, and I think that's honest to say.</p>
         </div>
+        <!-- Blog Post: RealPage -->
+        <div id="post-realpage-page" class="page">
+            <a href="#" class="blog-back-button" onclick="event.preventDefault(); showPage('blog');">← Back to Blog</a>
+            
+            <div class="post-header">
+                <div class="date">22 August 2026</div>
+                <h1>The Invisible Hand(Shake): The Algorithm that Fixed US Rents</h1>
+            </div>
+
+            <div class="post-content">
+                <p>If you were a resident in the US looking to rent an apartment in a major city, you'd probably feel like every building is charging suspiciously similar prices. You wouldn't be wrong to question it.</p>
+
+                <p>For the past two years, the Department of Justice has been actively tackling one of the clearest cases of algorithmic collusion the courts have ever seen. The defendants being RealPage and the case revolving around: a piece of software, thousands of landlords, and a legal question that traditional antitrust law was never built to answer: what happens when human voices of collusion are replaced by mechanical ones?</p>
+
+                <h3>How It Worked</h3>
+
+                <p>RealPage sells pricing software to landlords. Landlords input data such as occupancy rates, lease terms, what tenants are actually paying and the algorithm spits out a "recommended" rent for each unit. Nothing unusual so far.</p>
+
+                <p>The problem, according to the DOJ, is what the software pooled together. RealPage wasn't just using an individual landlord's data to price their units. It was pooling non-public, competitively sensitive data from thousands of landlords across the same cities, then using that pooled data to feed prices back to all of them. Landlord A's data was quietly informing Landlord B's rent. RealPage's own marketing materials, according to the complaint, said the tools were designed to push pricing higher across the market as a whole. Despite no discussion between landlords to fix prices, an overreaching algorithmic hand decided that would be the case.</p>
+
+                <h3>Why This Breaks the Old Rules</h3>
+
+                <p>Antitrust law, in its classic form, is built around proving an agreement. Two competitors get in a room, shake hands, agree to keep prices high. That handshake is the crime. Prosecutors have spent a century building case law around finding that handshake through emails, phone records, or a whistleblower in the room. RealPage however, never needed a room. The "agreement", if it can even be referred to as that, was distributed across thousands of separate transactions between individual landlords and a single software vendor. Nobody colluded in the traditional sense; they just all quietly deferred to the same omniscient algorithm.</p>
+
+                <p>This is what economists and legal scholars call tacit collusion through a common intermediary, or more informally, hub-and-spoke coordination. Where RealPage sits at the hub and landlords are the spokes that never come into contact.</p>
+
+                <h3>The Regulatory Scramble</h3>
+
+                <p>Regulators noticed. In November 2025, the DOJ and RealPage reached a settlement (still waiting on court approval) that will restrict how RealPage's clients can share data with each other going forward. But the more interesting response has come from state legislatures, which aren't waiting around for case law to catch up. California and New York have both passed laws in the past year that directly target what they call "common pricing algorithms", software that sets or recommends prices using competitor data. These laws aren't an outright ban on algorithmic pricing. Which as controversial as it remains, I believe would be a disproportionate response. They ban the specific mechanism RealPage used: pooling non-public data across competitors to inform pricing decisions.</p>
+
+                <p>It's a new category of law, written specifically because this case didn't fit the outdated regulatory framework.</p>
+
+                <h3>What Happens Next</h3>
+
+                <p>The RealPage settlement is still sitting in front of a federal court, waiting on approval. No matter the result of the case, this won't be the end of the story. It's just the first battle in the emerging war between algorithmic pricing and regulators. What's striking is how fast the response has moved once the pattern was identified. It took California and New York less than a year to write laws targeting the exact mechanism RealPage used, which is highly unusual. Legislation is normally slow to catch up with markets. Here, it's arguably moving faster than the litigation itself.</p>
+
+                <p>The bigger question this leaves open is whether RealPage is an outlier or an early example of something much more common; pricing software isn't unique to rental markets as retail, airlines and ride-hailing all rely on some version of the same idea: feed an algorithm enough data, let it find the price that maximises revenue. Most of that is legal, and much of it is genuinely able to benefit firms and consumers simultaneously through more efficient pricing. The RealPage case sways across the fine line between revenue maximisation and 'hidden cartels', where exactly it will rest is still being determined. That's what makes it worth watching.</p>
+            </div>
+        </div>
+
+</parameter>
 
         <!-- Blog Post: Introduction -->
         <div id="post-intro-page" class="page">
@@ -1313,12 +1362,14 @@
             pages.forEach(page => page.classList.remove('active'));
 
             // Show selected page
-            const pageMap = {
+                        const pageMap = {
                 'home': 'home-page',
                 'blog': 'blog-page',
                 'about': 'about-page',
-                'post-intro': 'post-intro-page'
+                'post-intro': 'post-intro-page',
+                'post-realpage': 'post-realpage-page'
             };
+
 
             const pageId = pageMap[pageName];
             if (pageId) {
