@@ -351,19 +351,11 @@
             font-weight: 600;
             color: #1f2937;
         }
+
         .post-content em {
             font-style: italic;
             color: #4b5563;
         }
-
-        .post-content ul {
-            margin: 0 0 24px 24px;
-        }
-
-        .post-content li {
-            margin-bottom: 8px;
-        }
-
 
         /* Footer */
         footer {
@@ -507,23 +499,13 @@
 
             <div class="blog-section">
                 <h2>Latest Posts</h2>
-                            <div class="blog-list-item" onclick="showPage('post-airline-games')">
-                <div class="date">2 September 2026</div>
-                <h2>Two Games, One Industry: How Airlines Compete and How They Price You</h2>
-                <p>Airlines fight each other through capacity wars and price each passenger individually through algorithms—two unrelated economic games running on the same flights, explaining most of what feels irrational about airfare.</p>
-                <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-airline-games');">Read More →</a>
-            </div>
-
                 
-                                <div class="blog-post-card" onclick="showPage('post-realpage')">
-                                    <div class="blog-post-card" onclick="showPage('post-airline-games')">
-                    <div class="date">2 September 2026</div>
-                    <h3>Two Games, One Industry: How Airlines Compete and How They Price You</h3>
-                    <p>Airlines fight each other through capacity wars and price each passenger individually through algorithms—two unrelated economic games running on the same flights, explaining most of what feels irrational about airfare.</p>
-                    <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-airline-games');">Read More →</a>
+               <div class="blog-post-card" onclick="showPage('post-realpage')">
+                    <div class="date">22 August 2026</div>
+                    <h3>The Invisible Hand(Shake): The Algorithm that Fixed US Rents</h3>
+                    <p>Millions of US renters have faced suspiciously similar price hikes across competing buildings. Behind it lies one of the clearest cases of algorithmic collusion the courts have ever seen.</p>
+                    <a href="#" class="read-more" onclick="event.preventDefault(); showPage('post-realpage');">Read More →</a>
                 </div>
-
-              
             </div>
 
             <div class="newsletter">
@@ -1269,56 +1251,6 @@
             <p>My research spans airline economics, dynamic pricing, algorithmic collusion, and competition policy. I've worked in wealth management and asset management, which shaped how I think about incentives and strategic behaviour.</p>
             <p>These posts are my thinking in progress. Some are deep dives into theory. Others are responses to current events. All of them aim to be rigorous but accessible—I'm still learning, and I think that's honest to say.</p>
         </div>
-                    <!-- Blog Post: Airline Games -->
-        <div id="post-airline-games-page" class="page">
-            <a href="#" class="blog-back-button" onclick="event.preventDefault(); showPage('blog');">← Back to Blog</a>
-            
-            <div class="post-header">
-                <div class="date">2 September 2026</div>
-                <h1>Two Games, One Industry: How Airlines Compete and How They Price You</h1>
-            </div>
-
-            <div class="post-content">
-                <p>The airline industry is a unique world as it runs two completely different pricing problems simultaneously, governed by two different branches of economic theory. The first is a strategic game between firms. The second is a mechanism design problem aimed at a single passenger. Most people who complain about flight prices are actually describing the second problem while assuming it's caused by the first. It isn't. Understanding both, and where they do and don't overlap explains most of what feels irrational about airfare.</p>
-
-                <h3>Game One: Capacity as a Strategic Weapon</h3>
-
-                <p>When an airline considers entering a route a rival already serves, it isn't solving a simple supply-and-demand problem. It's playing a repeated game with imperfect information, and the relevant branch of theory isn't classical Bertrand competition (where firms compete purely on price and margins collapse toward marginal cost). It more closely resembles a Cournot-style capacity game, because the real strategic variable isn't the ticket price, it's how many seats an airline commits to the route before demand is known.</p>
-
-                <p>Model it simply. Two airlines, each deciding whether to hold capacity steady or expand aggressively on a shared route. The payoff matrix looks like a Prisoner's Dilemma:</p>
-
-                <ul>
-                    <li>Both hold steady → both earn supracompetitive margins</li>
-                    <li>One expands; one holds → the expander captures market share at the holder's expense</li>
-                    <li>Both expand → excess capacity floods the route, average fares collapse, both airlines may operate at a loss until one retreats</li>
-                </ul>
-
-                <p>The Nash equilibrium of a single-round version of this game is for both airlines to expand, since each firm's dominant strategy is to flood regardless of what the rival does, built on the same logic that makes the Prisoner's Dilemma a dilemma in the first place. But airline competition isn't single round. It's repeated, often over years on the same route, which opens the door to tacit collusion sustained through retaliation: an airline that over-expands on one route can expect retaliatory expansion on a different route where the roles reverse. This is the folk theorem territory; cooperation becomes sustainable in infinitely repeated games if the discount factor is high enough and retaliation is credible.</p>
-
-                <p>What makes airline capacity competition interesting is that the "retaliation" doesn't have to happen on the same route. A carrier can punish aggressive entry on Route A by expanding aggressively on the aggressor's home turf, Route B. Forming a cross-route enforcement mechanism that's much harder to detect or regulate than conventional collusion, because no single route looks anomalous in isolation.</p>
-
-                <h3>Game Two: Third-Degree Price Discrimination at Individual Resolution</h3>
-
-                <p>The price variation you see between passengers on the same flight has nothing to do with the game above. It's a separate, older piece of theory called third-degree price discrimination.</p>
-
-                <p>The standard model: a monopolist (or imperfectly competitive firm) facing two or more consumer segments with different price elasticities of demand can increase total revenue by charging each segment a price inversely related to its elasticity. Business travellers, historically, have had low elasticity (they need to fly regardless of price, often on someone else's expense account) and are charged accordingly. Leisure travellers have high elasticity and get the discounted fares, the Saturday-night-stay restrictions, the early-booking discounts.</p>
-
-                <p>Classical price discrimination sorted consumers into a handful of buckets using self-selection mechanisms because airlines couldn't observe individual elasticity directly. Modern dynamic pricing algorithms don't need self-selection. Elasticity is inferred directly from behavioural signals such as device type, search frequency, time-to-departure, browsing history, and connection speed. Therefore, collapsing what used to be third-degree discrimination (segment-level) toward something approaching first-degree discrimination (individual-level), where the firm charges each consumer close to their actual reservation price.</p>
-
-                <p>This is significant because the welfare implications of price discrimination change dramatically between the two channels. Third-degree discrimination has an ambiguous welfare effect, being able to increase total output (and therefore total welfare) by letting firms serve price-sensitive segments they'd otherwise exclude, but it transfers surplus from high-elasticity to low-elasticity consumers. First-degree discrimination extracts the entire consumer surplus as producer surplus while technically maximising allocative efficiency. Airlines aren't at that limit, but every improvement in behavioural inference pushes them closer to it, and the surplus transfer compounds specifically against the passengers least able to shop around: last-minute bookers, inflexible travel dates, anyone whose search pattern signals urgency rather than price sensitivity.</p>
-
-                <h3>Where the Two Systems Diverge</h3>
-
-                <p>The critical point is that these two games don't share an optimisation target. The capacity game is solved at the route level, between firms, over a long time horizon, with the objective of sustaining margin against a rival. The pricing game is solved at the individual level, within a single firm, over a booking window of days or hours, with the objective of extracting maximum willingness-to-pay per seat.</p>
-
-                <p>An airline can be locked in an aggressive, margin-destroying capacity war with a rival on a given route, while simultaneously running highly profitable first-degree-adjacent price discrimination against individual passengers on that same route. The two systems don't offset each other, because they're not solving the same equation. Route-level competition compresses average fares; individual-level discrimination determines how that average is distributed across passengers. A route can have brutally thin average margins and still contain passengers paying four times what the person next to them paid.</p>
-
-                <p>This is the piece that's usually missing from popular accounts of "why flights are so expensive." The honest answer is that they're often not expensive on average, with the margins in the industry being notoriously thin, but the variance around that average is enormous, and that variance is a separate, deliberately engineered phenomenon, running on different logic entirely from the competitive forces most people assume are setting the price.</p>
-            </div>
-        </div>
-
-</parameter>
-
         <!-- Blog Post: RealPage -->
         <div id="post-realpage-page" class="page">
             <a href="#" class="blog-back-button" onclick="event.preventDefault(); showPage('blog');">← Back to Blog</a>
@@ -1430,15 +1362,13 @@
             pages.forEach(page => page.classList.remove('active'));
 
             // Show selected page
-                             const pageMap = {
+                        const pageMap = {
                 'home': 'home-page',
                 'blog': 'blog-page',
                 'about': 'about-page',
                 'post-intro': 'post-intro-page',
-                'post-realpage': 'post-realpage-page',
-                'post-airline-games': 'post-airline-games-page'
+                'post-realpage': 'post-realpage-page'
             };
-
 
 
             const pageId = pageMap[pageName];
